@@ -1,0 +1,22 @@
+#S3 Connection Data
+accessKey:
+secretKey:
+sessionToken:
+s3Region:
+username:
+password:
+
+#Snowflake Connection Data
+snowflakeUrl:
+snowflakeUserName:
+snowflakePassword:
+snowflakeRole:
+snowflakeWarehouse:
+snowflakeDatabase:
+
+#API Connection Data
+apiUrl:
+authenticationEndpoint:
+
+#Files
+files: src/test/resources/files

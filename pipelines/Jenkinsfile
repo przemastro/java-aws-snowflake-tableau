@@ -1,0 +1,24 @@
+pipeline {
+   agent any
+   stages {
+     stage('Repository Checkout') {
+        steps {
+           git 'https://github.com/przemastro/java-aws-snowflake-tableau'
+        }
+     }
+     stage('E2E Tests') {
+        steps {
+           bat 'mvn verify -DBackendRunner.java'
+           // publish html
+           publishHTML(target: [
+           reportName: 'Serenity',
+           reportDir: 'target/site/serenity',
+           reportFiles: 'index.html',
+           keepAll: true,
+           alwaysLinkToLastBuild: true,
+           allowMissing: false
+           ])
+        }
+     }
+   }
+}
