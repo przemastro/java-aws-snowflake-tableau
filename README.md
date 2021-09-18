@@ -1,4 +1,4 @@
-# JavaRestAssured Test Framework
+# JavaAWSSnowflakeTableaut Test Framework
 [![GitHub issues](https://img.shields.io/github/issues/przemastro/java-aws-snowflake-tableau)](https://github.com/przemastro/java-aws-snowflake-tableau/issues)
 [![GitHub forks](https://img.shields.io/github/forks/przemastro/java-aws-snowflake-tableau)](https://github.com/przemastro/java-aws-snowflake-tableau/network)
 [![GitHub stars](https://img.shields.io/github/stars/przemastro/java-aws-snowflake-tableau)](https://github.com/przemastro/java-aws-snowflake-tableau/stargazers)
