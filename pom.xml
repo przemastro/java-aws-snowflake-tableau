@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.company.qa</groupId>
+    <artifactId>Template</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <java.version>15</java.version>
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+        <cucumber.version>4.7.1</cucumber.version>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
+        <selenium.version>3.141.59</selenium.version>
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <webdrivermanager.version>3.6.2</webdrivermanager.version>
+        <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+        <rest-assured.version>4.0.0</rest-assured.version>
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <lombok.version>1.18.8</lombok.version>
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+        <slf4j.version>1.7.27</slf4j.version>
+        <!-- https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-osgi -->
+        <jaxb.version>2.3.2</jaxb.version>
+        <!-- https://mvnrepository.com/artifact/org.json/json -->
+        <org.json.version>20190722</org.json.version>
+        <!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
+        <jdbc.version>7.0.0.jre8</jdbc.version>
+        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+        <allure.version>2.12.1</allure.version>
+        <!-- https://mvnrepository.com/artifact/net.lightbody.bmp/browsermob-core -->
+        <browsermob.version>2.1.5</browsermob.version>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+        <maven.compiler.version>3.8.1</maven.compiler.version>
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+        <maven.surefire.version>2.22.2</maven.surefire.version>
+
+        <aspectj.version>1.9.4</aspectj.version>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+       
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-server</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${webdrivermanager.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${rest-assured.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>jaxb-osgi</artifactId>
+                    <groupId>com.sun.xml.bind</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
+        <!-- Remove when rest-assured POM will be updated (that is when new version of rest-assured will be released) -->
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-osgi</artifactId>
+            <version>${jaxb.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>${org.json.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>${jdbc.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>${allure.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.lightbody.bmp</groupId>
+            <artifactId>browsermob-core</artifactId>
+            <version>${browsermob.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.digidoc4j.dss/dss-xades -->
+        <dependency>
+            <groupId>org.digidoc4j.dss</groupId>
+            <artifactId>dss-xades</artifactId>
+            <version>4.7.RC2.d4j.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.digidoc4j.dss</groupId>
+            <artifactId>dss-service</artifactId>
+            <version>4.7.RC2.d4j.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.digidoc4j.dss</groupId>
+            <artifactId>dss-token</artifactId>
+            <version>4.7.RC2.d4j.1</version>
+        </dependency>
+
+
+    </dependencies>
+
+    <build>
+      <sourceDirectory>src/main/java</sourceDirectory>
+      <testSourceDirectory>src/main/java</testSourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <annotationProcessorPaths>
+                      <path>
+                        <groupId>org.projectlombok</groupId>
+                        <artifactId>lombok</artifactId>
+                        <version>1.18.20</version>
+                      </path>
+                  </annotationProcessorPaths>  
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.19.1</version>
+                <configuration>
+                    <includes>
+                      <include>${SnowflakeUrl}</exclude>
+                      <include>${SnowflakeUserName}</exclude>
+                      <include>${SnowflakePassword}</exclude>
+                      <include>${SnowflakeRole}</exclude>
+                      <include>${SnowflakeDatabase}</exclude>
+                      <include>${SnowflakeWarehouse}</exclude>
+                      <include>${AwsAccessKey}</exclude>
+                      <include>${AwsSecretKey}</exclude>
+                      <include>${AwsSessionToken}</exclude>
+                      <include>${AwsUsername}</exclude>
+                      <include>${AwsPassword}</exclude>
+                      <include>${AwsRegion}</exclude>
+                      <include>${Runner}</exclude>
+                    </includes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
